@@ -1,8 +1,43 @@
+function createDragon(name, rider, temperment) {
+  var dragon = {
+    name: name,
+    rider: rider,
+    temperment: temperment,
+    timesEaten: 0,
+    hungry: true
+  }
+  return dragon;
+}
 
+function greetRider(dragon) {
+  return `Hi, ${dragon.rider}!`;
+}
+
+function eat(dragon) {
+  if (dragon.timesEaten < 2) {
+    dragon.timesEaten += 1;
+  } else if (dragon.timesEaten = 2) {
+    dragon.timesEaten += 1;
+    dragon.hungry = false;
+  } else {
+    dragon.hungry = false;
+  }
+  return dragon;
+}
+
+function findFireBreathers(allDragons) {
+  var fireBreathers = [];
+  for (var i = 0; i < allDragons.length; i++) {
+    if (allDragons[i].temperment === 'aggressive') {
+      fireBreathers.push(allDragons[i]);
+    }
+  }
+  return fireBreathers;
+}
 
 module.exports = {
-  // createDragon, 
-  // greetRider, 
-  // eat, 
-  // findFireBreathers
+  createDragon, 
+  greetRider, 
+  eat, 
+  findFireBreathers
 }
