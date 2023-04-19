@@ -14,13 +14,9 @@ function greetRider(dragon) {
 }
 
 function eat(dragon) {
-  if (dragon.timesEaten < 2) {
-    dragon.timesEaten += 1;
-  } else if (dragon.timesEaten = 2) {
-    dragon.timesEaten += 1;
-    dragon.hungry = false;
-  } else {
-    dragon.hungry = false;
+  dragon.timesEaten += 1
+  if (dragon.timesEaten === 3) {
+    dragon.hungry = false
   }
   return dragon;
 }
